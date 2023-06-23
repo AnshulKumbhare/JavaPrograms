@@ -1,3 +1,5 @@
+package Patterns;
+
 public class Pattern1WhileLoop {
     public static void main(String[] args) {
         int i=0;
