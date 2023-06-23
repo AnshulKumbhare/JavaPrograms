@@ -37,7 +37,4 @@ public class Palindrome {
         return false;
     }
 
-    boolean isPalindromeLogic2(String str){
-
-    }
 }
