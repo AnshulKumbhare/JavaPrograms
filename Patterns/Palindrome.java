@@ -17,8 +17,12 @@ public class Palindrome {
         System.out.println("Enter String: ");
         String inputString = sc.next();
 
-        System.out.println(new Palindrome().isPalindromeLogic1(inputString));
-
+        if(inputString.length() == 1){
+            System.out.println("It's a single character string hence it will be bydefault palindrome");
+        }else {
+            System.out.println("Using reversal of String approach: " + new Palindrome().isPalindromeLogic1(inputString));
+            System.out.println("Using Finding a mid of a String approach: " + new Palindrome().isPalindromeLogic2(inputString));
+        }
     }
 
     boolean isPalindromeLogic1(String str){
@@ -38,6 +42,33 @@ public class Palindrome {
     }
 
     boolean isPalindromeLogic2(String str){
+        int size = str.length();
+        int left = 0;
+        int right = 0;
+        // If length of a string is odd
+        if(size%2 != 0){
+            int mid = size/2;
+             left = mid -1;
+             right = mid + 1;
+        }else{
+            int mid = size/2;
+             left = mid-1;
+             right = mid;
+        }
 
+        return compareChar(str, left, right);
+    }
+
+    boolean compareChar(String str, int left, int right){
+        while(left != 0){
+            if(str.charAt(left) == str.charAt(right)){
+                left--;
+                right++;
+            }else{
+                return false;
+            }
+        }
+
+        return true;
     }
 }
