@@ -5,7 +5,7 @@ Git commands:
 
 git clone <repository_url> --> To clone git repo/project to local machine'
 git branch --> to check total available branches
-git branch <"Branch_Name"> --> To createa new branch with specified name from master/main branch
+git branch <"Branch_Name"> --> To create new branch with specified name from master/main branch
 git checkout <"Branch_Name"> --> to checkout to spceified branch from current brenach / chnage current branch to specified branch
 git status --> to check what all are changes made in the branch
 git add <file_name> ---> to add file having changes to the local repo Ex: git add *.java git add *.txt git add ProgramFile/pattern.java
